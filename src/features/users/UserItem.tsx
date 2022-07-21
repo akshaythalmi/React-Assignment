@@ -2,7 +2,6 @@ import { PostManager } from "../../managers/PostManager";
 import { UserManager } from "../../managers/UserManager";
 import { User } from "../../models";
 import ListGroup from "react-bootstrap/ListGroup";
-import { useState } from "react";
 import { userStore } from "../../store";
 import { useSnapshot } from "valtio";
 
