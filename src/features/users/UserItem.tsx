@@ -11,16 +11,11 @@ interface UserItemsProps {
 }
 
 const UserItem = ({ user }: UserItemsProps) => {
-  const [activeUser, setActiveUser] = useState(0);
   const { selectedUser } = useSnapshot(userStore);
   const isSelectedUser = selectedUser?.id === user.id;
   const handleUser = async () => {
     await UserManager.getUserById(user.id);
     await PostManager.getAll(user);
-  };
-
-  const handleClick = async (user: User) => {
-    setActiveUser(user.id);
   };
 
   return (
